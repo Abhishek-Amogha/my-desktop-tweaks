@@ -1,0 +1,5 @@
+# ensure that Ctrl + Del behaves as expected
+"\e[3;5~": kill-word
+
+# # Set Ctrl + Backspace to delete the previous word
+"\b":backward-kill-word
