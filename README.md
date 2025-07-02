@@ -20,13 +20,13 @@ The `.vimrc` file contains my Vim editor customizations. It includes a number of
 3. **Install `.vimrc`**:
     Copy the `.vimrc` file from this repository to your home directory:
     ```bash
-    cp my-desktop-tweaks/.vimrc ~/.vimrc
+    cp vimrc ~/.vimrc
     ```
 
 3. **Install `.inputrc`**:
     Copy the `.inputrc` file to your home directory:
     ```bash
-    cp my-desktop-tweaks/.inputrc ~/.inputrc
+    cp inputrc ~/.inputrc
     ```
 
 4. **Reload the configuration**:
