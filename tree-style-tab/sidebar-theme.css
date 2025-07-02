@@ -1,0 +1,101 @@
+/* Show title of unread tabs with red and italic font */
+:root.sidebar tab-item.unread .label-content {
+  color: red !important;
+  font-style: italic !important;
+}
+
+/* Add private browsing indicator per tab */
+:root.sidebar tab-item.private-browsing tab-label:before {
+  content: "🕶";
+}
+
+/* Increase font size in the sidebar */
+:root.sidebar tab-item .label-content {
+  font-size: 17px !important; /* Change this value to your desired font size */
+}
+
+/* Change the font family for a more modern look */
+:root.sidebar tab-item .label-content {
+  font-family: 'Arial', sans-serif !important; /* Change to your preferred font */
+  color: rgb(254,254,254);
+}
+
+/* Active tab styling */
+:root.sidebar tab-item[selected] .label-content {
+  font-weight: bold !important; /* Bold font for active tab */
+  color: #007bff !important; /* Change color for active tab */
+}
+
+:root.sidebar::-webkit-scrollbar-thumb {
+  background-color: rgb(0,0,0); /* Color of the scrollbar thumb */
+  border-radius: 8px; /* Rounded corners for the scrollbar thumb */
+}
+
+/* Increase padding and margin for better spacing */
+:root.sidebar tab-item {
+  margin: 0.8px !important; /* Space between tabs */
+  padding: 1px !important; /* Padding inside tabs */
+  background-color: rgb(26,26,26);
+  border: 2px solid rgb(60,60,60); /* coloured border to create a margin effect */
+}
+
+/* Add hover effect for tabs */
+:root.sidebar tab-item:hover {
+  background-color: rgb(100,100,100) !important; /* Slightly darker gray on hover */
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Change styling of pending (unloaded) tabs */
+tab-item.discarded tab-item-substance {
+  opacity: 0.45;
+}
+
+#pinned-tabs-container, #normal-tabs-container { scrollbar-width: auto; }
+
+.newtab-button-box {
+  background-color: rgb(50,120,90) !important; 
+}
+
+:root tab-item tab-twisty {
+  background-color: rgb(120,120,120);
+  border-radius: 15px;
+  margin-right: 5px;
+}
+
+/* Style the favicon container */
+tab-item:not(.faviconized):not(.loading) tab-favicon {
+  border-radius: 5px;
+  background-color: rgb(1,125,125); /* coloured background around the favicon */
+  border: 2px solid white; /* White border to create margin effect */
+  padding: 1px; /* Optional: space between the icon and the border */
+  
+  box-sizing: content-box; /* Makes sure the padding doesn't affect the border radius */
+}
+
+tab-item {
+  --tab-margin-left: 3px;
+  --tab-margin-right: 7px;
+}
+
+:root.sidebar #background {
+  background-color: rgb(0,0,0);
+}
+
+tab-closebox {
+  background: none !important; /* Remove any background image (if any) */
+  content: none !important; /* Ensure any existing content is cleared */
+}
+
+tab-closebox::after {
+  content: "⨉"; /* Custom character */
+  background: none !important; /* Ensure no background */
+  color: white !important; /* Solid white X */
+  line-height: 1.25;
+  text-align: center;
+  font-size: 18px; /* Adjust size as needed */
+  font-weight: bold; /* Optional: make the 'X' bolder */
+  mask: none;
+  display: block;
+  width: 1.25em; /* Adjust size */
+  height: 1.25em; /* Adjust size */
+}
